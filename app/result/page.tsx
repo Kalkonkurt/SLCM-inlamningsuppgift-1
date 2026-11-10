@@ -7,9 +7,12 @@ export default function Result() {
 	return (
 		<main>
 			<div className={styles.contentWrapper}>
+				<h1>Your Agent: </h1>
 				<img src={agent.image} alt={agent.name} />
-				<h1>You are gonna play: {agent.name}</h1>
-				<Link href="/">Back</Link>
+				<h2>{agent.name}</h2>
+				<Link href="/" className="button">
+					Go Back
+				</Link>
 			</div>
 		</main>
 	);

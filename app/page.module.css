@@ -1,23 +1,21 @@
-.content {
+.contentWrapper {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
 	text-align: center;
+	background: url('https://cdn.komputerswiat.pl/1/_KAk9lBaHR0cHM6Ly9vY2RuLmV1L3B1bHNjbXMvTURBXy80YTNlZDVmYzY1NTg3ZDEyMjI0NzI1OWZlMjk3NDU4My5qcGeTlQMAAM0IAM0EgJMFzQlgzQTslQfZhmh0dHBzOi8vY2RuLmtvbXB1dGVyc3dpYXQucGwvMS9Yd0lrOWs0YUhSMGNITTZMeTlqWkc0dWEyOXRjSFYwWlhKemQybGhkQzV3YkM5cGJXY3ZiRzluYjE5cmIyMXdkWFJsY2w5emQybGhkQzV3Ym1lUmxRSUFaTVBEM2dBQ29UQUhvVEVFCMIA3gACoTAHoTEE');
+	background-size: cover;
+	box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.5);
 }
 
-.button {
-	margin-top: 1.5rem;
-	padding: 0.75rem 1.5rem;
-	border-radius: 0.5rem;
-	background: #5b5bf0;
-	color: white;
-	font-weight: bold;
-	text-decoration: none;
+.card {
+	padding: 150px;
+	background-color: #d1363a;
 	box-shadow:
 		inset 0 1px 0 #ffffff59,
 		inset 0 -2px 0 #0003,
 		0 1px 2px #0006,
-		0 8px 24px -6px #5b5bf099;
+		0 8px 24px -6px #1a1a1a99;
 }
