@@ -5,8 +5,8 @@ import styles from './page.module.css';
 export default function Home() {
 	return (
 		<main>
-			<div className={styles.contentWrapper}>
-				<div className={styles.card}>
+			<div className="contentWrapper">
+				<div className="card">
 					<h1 className={styles.h1}>Generate Valorant Agent</h1>
 					<Link href="/result" className="button">
 						Generate

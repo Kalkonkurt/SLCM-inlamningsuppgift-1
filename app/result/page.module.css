@@ -1,13 +1,13 @@
-.contentWrapper {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	min-height: 100vh;
+.resultCard {
+	width: 450px;
+	height: 600px;
 }
 
-.contentWrapper img {
-	height: 200px;
-	width: 200px;
+@media (max-width: 768px) {
+	.resultCard {
+		width: 90%;
+		max-width: 450px;
+		height: auto;
+		min-height: 500px;
+	}
 }
