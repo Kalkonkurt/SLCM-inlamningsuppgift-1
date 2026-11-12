@@ -20,7 +20,7 @@ export default function Result() {
 		<main>
 			<div className="contentWrapper">
 				<div className={`card ${styles.resultCard}`}>
-					<h1>Your Agent: </h1>
+					<h1>Your Agent </h1>
 					<Suspense fallback={<p>Picking an agent...</p>}>
 						<RandomAgent />
 					</Suspense>
