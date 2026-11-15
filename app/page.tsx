@@ -7,7 +7,7 @@ export default function Home() {
 		<main>
 			<div className="contentWrapper">
 				<div className="card">
-					<h1 className={styles.h1}>Generate Valorant Agent</h1>
+					<h1 className={styles.h1}>Generate Random Valorant Agent</h1>
 					<Link href="/result" className="button">
 						Generate
 					</Link>
