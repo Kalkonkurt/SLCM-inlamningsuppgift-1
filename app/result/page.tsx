@@ -3,6 +3,8 @@ import { Suspense } from 'react';
 import { connection } from 'next/server';
 import styles from './page.module.css';
 
+//TEST//
+const x = ;
 interface ApiAgent {
 	displayName: string;
 	displayIcon: string;
