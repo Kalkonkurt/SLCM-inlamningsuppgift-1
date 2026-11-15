@@ -2,17 +2,38 @@ import Link from 'next/link';
 import { Suspense } from 'react';
 import { connection } from 'next/server';
 import styles from './page.module.css';
-import { agents } from '../../data';
+
+interface ApiAgent {
+	displayName: string;
+	displayIcon: string;
+}
 
 async function RandomAgent() {
 	await connection();
-	const agent = agents[Math.floor(Math.random() * agents.length)];
-	return (
-		<>
-			<img src={agent.image} alt={agent.name} />
-			<h2>{agent.name}</h2>
-		</>
-	);
+	const logLevel = process.env.LOG_LEVEL ?? 'info';
+	const baseUrl = process.env.VALORANT_API_URL ?? 'https://valorant-api.com';
+
+	try {
+		const res = await fetch(`${baseUrl}/v1/agents?isPlayableCharacter=true`);
+		if (!res.ok) throw new Error(`Status ${res.status}`);
+		const { data }: { data: ApiAgent[] } = await res.json();
+
+		if (logLevel === 'debug') {
+			console.debug(`DEBUG: Fetched ${data.length} agents from ${baseUrl}`);
+		}
+
+		const agent = data[Math.floor(Math.random() * data.length)];
+		console.info(`INFO: Agent generated: ${agent.displayName}`);
+		return (
+			<>
+				<img src={agent.displayIcon} alt={agent.displayName} />
+				<h2>{agent.displayName}</h2>
+			</>
+		);
+	} catch (error) {
+		console.error('ERROR: Could not fetch agents', error);
+		return <p>Could not load an agent. Try again later.</p>;
+	}
 }
 
 export default function Result() {
