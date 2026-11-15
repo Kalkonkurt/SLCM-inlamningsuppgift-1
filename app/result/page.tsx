@@ -3,8 +3,8 @@ import { Suspense } from 'react';
 import { connection } from 'next/server';
 import styles from './page.module.css';
 
-//TEST FEL//
-const x = ;
+// //TEST FEL//
+// const x = ;
 interface ApiAgent {
 	displayName: string;
 	displayIcon: string;
